@@ -47,7 +47,7 @@ df['LoanAmount'].fillna(value=df['LoanAmount'].median())
 ![ds6](https://user-images.githubusercontent.com/119557910/229698882-e9a84f69-82fb-4bdc-a553-67de35275e94.png)
 ![ds7](https://user-images.githubusercontent.com/119557910/229698939-1899914d-9b83-4b2b-9b1e-c1dc782ebd81.png)
 
-##RESULT:
+### RESULT:
 Thus the given data is read cleansed and cleaned.
 
 
