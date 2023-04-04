@@ -20,46 +20,33 @@ Save the Clean data to the file
 
 # CODE
 ```
-Name : Thanika sree B
-Register Number : 212222008978
-**Data Cleaning - Data_set.csv**
-import numpy as np
 import pandas as pd
-import seaborn as sbn
-df = pd.read_csv("/content/Data_set.csv")
+df=pd.read_csv("/content/Loan_data.csv")
 print(df)
-df.head(10)
+
+df.head(5)
+
+df.tail(5)
+
+df.describe()
+
 df.info()
-df.isnull()
-df.isnull().sum()
-df['show_name'] = df['show_name'].fillna(df['aired_on'].mode()[0])
-df['aired_on'] = df['aired_on'].fillna(df['aired_on'].mode()[0])
-df['original_network'] = df['original_network'].fillna(df['aired_on'].mode()[0])
-df.head()
-df['rating'] = df['rating'].fillna(df['rating'].mean())
-df['current_overall_rank'] = df['current_overall_rank'].fillna(df['current_overall_rank'].mean())
-df.head()
-df['watchers'] = df['watchers'].fillna(df['watchers'].median())
-df.head()
-df.info()
+
 df.isnull().sum()
 
-**Data Cleannig - Loan_data.csv**
-data = pd.read_csv("/content/Loan_data.csv")
-print(data)
-data.head(5)
-data.isnull()
-data.isnull().sum()
-data['Gender'] = data["Gender"].fillna(data['Gender'].mode()[0])
-data['Dependents'] = data["Dependents"].fillna(data['Dependents'].mode()[0])
-data['Self_Employed'] = data["Self_Employed"].fillna(data['Self_Employed'].mode()[0])
-data['Credit_History'] = data["Credit_History"].fillna(data['Credit_History'].mode()[0])
-data.head()
-data['LoanAmount']=data['LoanAmount'].fillna(data['LoanAmount'].median())
-data.head()
-data['Loan_Amount_Term']=data['Loan_Amount_Term'].fillna(data['Loan_Amount_Term'].mean())
-data.head()
-data.info()
-data.isnull().sum()
+df=df[~df.duplicated()]
+print(df)
+
+df['Gender'].fillna(value=df['Gender'].mode())
+
+df['LoanAmount'].fillna(value=df['LoanAmount'].median())
 ```
-# OUPUT
+# OUPUT :
+![kavyaa2](https://user-images.githubusercontent.com/119557910/229698726-19062cf1-cb22-48f1-a96a-25d9d5c1ed8c.png)
+![ds5](https://user-images.githubusercontent.com/119557910/229698802-67207b8c-2a14-4330-9347-6cb9a35d2c10.png)
+![ds6](https://user-images.githubusercontent.com/119557910/229698882-e9a84f69-82fb-4bdc-a553-67de35275e94.png)
+![ds7](https://user-images.githubusercontent.com/119557910/229698939-1899914d-9b83-4b2b-9b1e-c1dc782ebd81.png)
+
+result :
+
+
